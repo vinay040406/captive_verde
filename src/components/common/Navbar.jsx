@@ -38,7 +38,7 @@ const Navbar = () => {
           <p className="text-xs leading-160 hidden sm:block">
             Empowering Wellness & Sustainability Through Indigenous Partnerships
           </p>
-          <div className="flex gap-3">
+          <ul className="flex gap-3">
             {HEADER_SOCIAL_LINKS.map((item, index) => (
               <Link href={item.href} key={index} aria-label={item.svg}>
                 <span className="border-[0.75px] border-whitee rounded-full h-6 w-6 bg-white flex justify-center items-center cursor-pointer group duration-300 ease-in hover:bg-dark-green">
@@ -49,7 +49,7 @@ const Navbar = () => {
                 </span>
               </Link>
             ))}
-          </div>
+          </ul>
         </header>
       </div>
 

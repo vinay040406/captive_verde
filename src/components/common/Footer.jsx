@@ -35,7 +35,9 @@ const Footer = () => {
                   key={index}
                   className="flex flex-col gap-3 xl:gap-4 font-poppins text-whitee "
                 >
-                  <h4 className="font-semibold leading-100 ">{item.title}</h4>
+                  <h3 className="font-semibold leading-100 text-base">
+                    {item.title}
+                  </h3>
                   <div className="flex flex-col gap-2 xl:gap-3">
                     {item.links.map((link, i) => (
                       <Link
@@ -50,7 +52,7 @@ const Footer = () => {
                 </div>
               ))}
               <div className="flex flex-col gap-4 font-poppins text-whitee col-span-2 md:col-span-1">
-                <h4 className="font-semibold leading-100">Contact</h4>
+                <h4 className="font-semibold leading-100 text-base">Contact</h4>
                 <div className="flex flex-col gap-3">
                   {FOOTER_ANCHOR_TAG_DATA.map((item, index) => (
                     <div
@@ -59,7 +61,7 @@ const Footer = () => {
                     >
                       <Icons
                         icon={item.svg}
-                        className={"h-4 w-4 sm:h-5 sm:w-5"}
+                        className={"h-4 w-4 sm:h-5 sm:w-7"}
                       />
                       <a
                         className="leading-160 text-whitee font-poppins xl:whitespace-nowrap min-w-0 wrap-break-word whitespace-pre-wrap text-sm sm:text-base a"
