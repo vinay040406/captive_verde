@@ -18,6 +18,7 @@ const Navbar = () => {
   const handleHamburgerState = () => {
     setHamburgerState(!hamburgerState);
   };
+
   const containerVariants = {
     hidden: {},
     show: {
@@ -27,6 +28,7 @@ const Navbar = () => {
       },
     },
   };
+
   const itemVariants = {
     hidden: { opacity: 0, y: -20 },
     show: { opacity: 1, y: 0 },
@@ -64,12 +66,10 @@ const Navbar = () => {
             />
           </Link>
 
-          <motion.ul className={`hidden md:flex gap-4 lg:gap-8 items-center `}>
+          <ul className={`hidden md:flex gap-4 lg:gap-8 items-center `}>
             {NAV_LINKS.map((item, index) => (
               <Link key={index} href={item.href}>
-                <motion.li className="leading-160 text-blacky li">
-                  {item.title}
-                </motion.li>
+                <li className="leading-160 text-blacky li">{item.title}</li>
               </Link>
             ))}
             <Button
@@ -77,7 +77,7 @@ const Navbar = () => {
               variant={"primary"}
               className={"lg:ml-39.5"}
             />
-          </motion.ul>
+          </ul>
 
           {hamburgerState ? (
             <RxCross2
@@ -115,13 +115,18 @@ const Navbar = () => {
               >
                 <motion.li
                   variants={itemVariants}
-                  className="leading-160 text-blacky py-1"
+                  className="leading-160 text-blacky py-1 li"
                 >
                   {item.title}
                 </motion.li>
               </Link>
             ))}
-            <Button text={"Contact"} variant={"primary"} className={"px-8"} />
+            <Button
+              onClick={handleHamburgerState}
+              text={"Contact"}
+              variant={"primary"}
+              className={"px-8 z-20"}
+            />
           </motion.ul>
         </motion.div>
       </div>

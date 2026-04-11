@@ -1,4 +1,4 @@
-export const Button = ({ text, className, variant }) => {
+export const Button = ({ text, className, variant, onClick }) => {
   const variants = {
     primary:
       "text-whitee bg-dark-green w-fit duration-300 px-5 py-3 md:px-8 md:py-4.25 ease-in border border-transparent hover:border-dark-green rounded-full hover:bg-whitee hover:text-dark-green font-poppins text-sm md:text-base leading-100 font-semibold",
@@ -12,6 +12,7 @@ export const Button = ({ text, className, variant }) => {
 
   return (
     <button
+      onClick={onClick}
       className={`${variants[variant] || ""} ${className} cursor-pointer`}
     >
       {text}
