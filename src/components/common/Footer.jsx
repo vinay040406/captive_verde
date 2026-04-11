@@ -78,6 +78,7 @@ const Footer = () => {
             <div className="flex gap-2 sm:gap-4">
               {FOOTER_SOCIAL_LINKS.map((item, index) => (
                 <a
+                  aria-label={item.svg}
                   href={item.href}
                   key={index}
                   className="h-8 w-8 rounded-full flex justify-center items-center border border-whitee group duration-300 ease-in hover:bg-white hover:border-transparent"
