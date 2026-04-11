@@ -70,8 +70,8 @@ const Navbar = () => {
 
           <ul className="hidden md:flex gap-4 lg:gap-8 items-center">
             {NAV_LINKS.map((item, index) => (
-              <li key={index} className="li">
-                <Link href={item.href} className="leading-160 text-blacky">
+              <li key={index}>
+                <Link href={item.href} className="leading-160 text-blacky li">
                   {item.title}
                 </Link>
               </li>
