@@ -1,5 +1,39 @@
 const Icons = ({ icon, pathClass, className, onClick, ref }) => {
   const iconList = {
+    logo: (
+      <svg
+        className={className}
+        width="101"
+        height="61"
+        viewBox="0 0 101 61"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="101" height="61" fill="url(#pattern0)" />
+
+        <defs>
+          <pattern
+            id="pattern0"
+            patternContentUnits="objectBoundingBox"
+            width="1"
+            height="1"
+          >
+            <use
+              href="#image0"
+              transform="matrix(0.00109863 0 0 0.00184452 -0.0625 -0.357957)"
+            />
+          </pattern>
+
+          <image
+            id="image0"
+            width="1024"
+            height="1024"
+            preserveAspectRatio="none"
+            href="data:image/png;base64,///nruzhAyBIUbYr3Tu7uSJBAKRk+9Yz6f..."
+          />
+        </defs>
+      </svg>
+    ),
     facebook: (
       <svg
         className={className}

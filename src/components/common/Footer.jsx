@@ -9,14 +9,14 @@ import Icons from "./Icons";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-black pt-10 md:pt-17.5 mt-16 md:mt-35 flex flex-col gap-5 sm:gap-10 md:gap-18.5">
+    <div className="w-full bg-blacky pt-10 md:pt-17.5 mt-16 md:mt-35 flex flex-col gap-5 sm:gap-10 md:gap-18.5">
       <div className="max-w-285 w-full mx-auto flex px-4 xl:px-0 ">
         <div className="flex flex-col gap-5 sm:gap-8 lg:gap-5.5 w-full">
-          <div className="flex gap-4 xl:gap-5.5 flex-col lg:flex-row w-full ">
+          <div className="flex gap-4 md:gap-6 lg:gap-8 xl:gap-5.5 flex-col xl:flex-row w-full ">
             <div className="flex flex-col gap-6 max-w-full lg:max-w-129.25 w-full ">
               <Link href={"/about"}>
                 <Image
-                  src={"/images/webp/logo.webp"}
+                  src={"/images/webp/logo.svg"}
                   height={104}
                   width={168}
                   alt="logo"

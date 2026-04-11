@@ -42,14 +42,16 @@ const Navbar = () => {
           </p>
           <ul className="flex gap-3">
             {HEADER_SOCIAL_LINKS.map((item, index) => (
-              <Link href={item.href} key={index} aria-label={item.svg}>
-                <span className="border-[0.75px] border-whitee rounded-full h-6 w-6 bg-white flex justify-center items-center cursor-pointer group duration-300 ease-in hover:bg-dark-green">
-                  <Icons
-                    icon={item.svg}
-                    pathClass={"group-hover:fill-whitee"}
-                  />
-                </span>
-              </Link>
+              <li key={index}>
+                <Link href={item.href} aria-label={item.svg}>
+                  <span className="border-[0.75px] border-whitee rounded-full h-6 w-6 bg-white flex justify-center items-center cursor-pointer group duration-300 ease-in hover:bg-dark-green">
+                    <Icons
+                      icon={item.svg}
+                      pathClass="group-hover:fill-whitee"
+                    />
+                  </span>
+                </Link>
+              </li>
             ))}
           </ul>
         </header>
@@ -59,24 +61,29 @@ const Navbar = () => {
         <nav className="max-w-285 py-2.25 w-full justify-between mx-auto flex items-center px-4">
           <Link href={"/about"} onClick={() => setHamburgerState(false)}>
             <Image
-              src={"/images/webp/logo.webp"}
+              src={"/images/webp/logo.svg"}
               width={101}
               height={61}
               alt="logo"
             />
           </Link>
 
-          <ul className={`hidden md:flex gap-4 lg:gap-8 items-center `}>
+          <ul className="hidden md:flex gap-4 lg:gap-8 items-center">
             {NAV_LINKS.map((item, index) => (
-              <Link key={index} href={item.href}>
-                <li className="leading-160 text-blacky li">{item.title}</li>
-              </Link>
+              <li key={index} className="li">
+                <Link href={item.href} className="leading-160 text-blacky">
+                  {item.title}
+                </Link>
+              </li>
             ))}
-            <Button
-              text={"Contact"}
-              variant={"primary"}
-              className={"lg:ml-39.5"}
-            />
+
+            <li>
+              <Button
+                text={"Contact"}
+                variant={"primary"}
+                className={"lg:ml-39.5"}
+              />
+            </li>
           </ul>
 
           {hamburgerState ? (
@@ -108,25 +115,24 @@ const Navbar = () => {
             className="flex flex-col gap-4 items-center mt-15"
           >
             {NAV_LINKS.map((item, index) => (
-              <Link
+              <motion.li
                 key={index}
-                href={item.href}
-                onClick={() => setHamburgerState(false)}
+                variants={itemVariants}
+                className="leading-160 text-blacky py-1 li"
               >
-                <motion.li
-                  variants={itemVariants}
-                  className="leading-160 text-blacky py-1 li"
-                >
+                <Link href={item.href} onClick={() => setHamburgerState(false)}>
                   {item.title}
-                </motion.li>
-              </Link>
+                </Link>
+              </motion.li>
             ))}
-            <Button
-              onClick={handleHamburgerState}
-              text={"Contact"}
-              variant={"primary"}
-              className={"px-8 z-20"}
-            />
+            <motion.li variants={itemVariants}>
+              <Button
+                onClick={handleHamburgerState}
+                text={"Contact"}
+                variant={"primary"}
+                className={"px-8 z-20"}
+              />
+            </motion.li>
           </motion.ul>
         </motion.div>
       </div>

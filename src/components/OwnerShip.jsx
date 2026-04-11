@@ -14,7 +14,7 @@ const OwnerShip = () => {
             height={510}
             width={550}
             alt="ownership"
-            className="md:object-cover object-contain object-center w-full lg:w-auto h-auto sm:h-auto lg:h-127.25 rounded-xl"
+            className="md:object-cover object-contain object-center lg:w-auto h-auto lg:h-127.25 rounded-xl"
           />
           <div className="flex flex-col gap-5 md:gap-8 max-w-full lg:max-w-131.75 w-full">
             <div className="flex flex-col gap-4">
