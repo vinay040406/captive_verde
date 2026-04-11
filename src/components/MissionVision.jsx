@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Heading from "./common/Heading";
 import Title from "./common/Title";
-import { MISSION_VISION_DATA } from "./utils/helper";
+import { MISSION_VISION_DATA } from "../utils/helper";
 
 const MissionVision = () => {
   return (

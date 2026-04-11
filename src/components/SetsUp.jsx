@@ -1,7 +1,7 @@
 import { Button } from "./common/Button";
 import Heading from "./common/Heading";
 import Icons from "./common/Icons";
-import { SETUP_DATA } from "./utils/helper";
+import { SETUP_DATA } from "../utils/helper";
 
 const SetsUp = () => {
   return (

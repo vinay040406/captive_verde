@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Button } from "./common/Button";
 import Title from "./common/Title";
 import Heading from "./common/Heading";
-import { OWNERSHIP_MODEL_DATA } from "./utils/helper";
+import { OWNERSHIP_MODEL_DATA } from "../utils/helper";
 
 const OwnerShip = () => {
   return (

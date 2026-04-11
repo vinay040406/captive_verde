@@ -2,7 +2,7 @@ import Image from "next/image";
 import Heading from "./common/Heading";
 import Icons from "./common/Icons";
 import Title from "./common/Title";
-import { ADVISORY_DATA } from "./utils/helper";
+import { ADVISORY_DATA } from "../utils/helper";
 
 const AdvisoryBoard = () => {
   return (

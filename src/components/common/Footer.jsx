@@ -4,7 +4,7 @@ import {
   FOOTER_ANCHOR_TAG_DATA,
   FOOTER_DATA,
   FOOTER_SOCIAL_LINKS,
-} from "../utils/helper";
+} from "../../utils/helper";
 import Icons from "./Icons";
 
 const Footer = () => {

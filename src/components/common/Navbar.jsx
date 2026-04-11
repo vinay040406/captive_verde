@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { HEADER_SOCIAL_LINKS, NAV_LINKS } from "../utils/helper";
+import { HEADER_SOCIAL_LINKS, NAV_LINKS } from "../../utils/helper";
 import Icons from "./Icons";
 import Image from "next/image";
 import Link from "next/link";
