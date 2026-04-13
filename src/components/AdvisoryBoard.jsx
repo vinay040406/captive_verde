@@ -26,7 +26,7 @@ const AdvisoryBoard = () => {
         </div>
         <div className="flex flex-col gap-4">
           {ADVISORY_DATA.map((item, index) => (
-            <div key={index} className="flex gap-3">
+            <div key={index} className="flex gap-3 items-center">
               <Icons icon={"tickMark"} />
               <p className="text-blacky font-medium leading-160 font-poppins text-sm sm:text-base">
                 {item.name}

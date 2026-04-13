@@ -11,6 +11,7 @@ import { motion } from "motion/react";
 
 const Navbar = () => {
   const [hamburgerState, setHamburgerState] = useState(false);
+
   useEffect(() => {
     document.body.style.overflow = hamburgerState ? "hidden" : "auto";
   });
